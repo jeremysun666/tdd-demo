@@ -11,8 +11,10 @@ public class TaxServiceImpl implements TaxService {
 			return Math.round(5000 + (income - 50000) * 0.2f);
 		} else if (income <= 200000){
 			return Math.round(15000 + (income - 100000) * 0.25f);
-		} else {
+		} else if (income <= 500000){
 			return Math.round(40000 + (income - 200000) * 0.5f);
+		} else {
+			return Math.round(190000 + (income - 500000) * 0.75f);
 		}
 	}
 }
