@@ -32,4 +32,9 @@ public class TaxServiceImplTest {
 	public void test_200000() {
 		assertEquals(40000, taxService.getIncomeTax(200000));
 	}
+
+	@Test
+	public void test_500000() {
+		assertEquals(190000, taxService.getIncomeTax(500000));
+	}
 }
