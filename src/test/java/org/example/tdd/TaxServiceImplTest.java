@@ -34,4 +34,10 @@ public class TaxServiceImplTest {
 		//15000 + (100000 * 0.25
 		assertEquals(40000, taxService.getIncomeTax(200000));
 	}
+
+	@Test
+	public void test_500000() {
+		//40000 + 300000 * 0.5
+		assertEquals(190000, taxService.getIncomeTax(500000));
+	}
 }
